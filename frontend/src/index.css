@@ -1,0 +1,81 @@
+/* ── Global reset + CSS variables ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  /* Dark theme (default) */
+  --bg:        #0c0e1a;
+  --bg2:       #111422;
+  --bg3:       #181c30;
+  --card:      #141728;
+  --card2:     #1a1e32;
+  --border:    #242840;
+  --border2:   #2e3350;
+
+  --text:      #e8eaf6;
+  --text2:     #9ba3cc;
+  --text3:     #5c6488;
+  --text4:     #3d4466;
+
+  --accent:    #f7c948;
+  --accent-h:  #ffdf7a;
+  --accent2:   #ff6b6b;
+  --accent3:   #5dffa0;
+  --accent4:   #7c8fff;
+  --accent5:   #ff8c69;
+
+  --green:     #5dffa0;
+  --red:       #ff6b6b;
+  --blue:      #7c8fff;
+  --purple:    #b57bff;
+
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  --radius:    14px;
+  --radius-sm: 9px;
+  --radius-xs: 6px;
+  --shadow:    0 8px 32px rgba(0,0,0,0.45);
+  --shadow-sm: 0 4px 16px rgba(0,0,0,0.3);
+
+  --sidebar-w: 300px;
+  --header-h:  68px;
+}
+
+[data-theme="light"] {
+  --bg:        #f4f5fa;
+  --bg2:       #eceef7;
+  --bg3:       #e4e6f2;
+  --card:      #ffffff;
+  --card2:     #f8f9fe;
+  --border:    #d8daea;
+  --border2:   #c8cce0;
+
+  --text:      #1a1e32;
+  --text2:     #4a5070;
+  --text3:     #8890b0;
+  --text4:     #b0b8d0;
+
+  --accent:    #d4a017;
+  --accent-h:  #e8b520;
+  --shadow:    0 8px 32px rgba(0,0,0,0.12);
+  --shadow-sm: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  transition: background 0.25s, color 0.25s;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text4); }
+
+button { font-family: var(--font-body); cursor: pointer; }
+code, pre { font-family: var(--font-code); }

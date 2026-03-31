@@ -1,0 +1,14 @@
+{
+  "name": "codebuddy",
+  "version": "2.0.0",
+  "description": "AI-Powered Code Explainer for Beginners — by Amna Yoosuf",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently --names \"SERVER,CLIENT\" --prefix-colors \"yellow.bold,cyan.bold\" --kill-others-on-fail \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "start": "npm run dev",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
